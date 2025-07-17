@@ -1,51 +1,149 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # spec3-chatbot-frontend
 Frontend package for the NASA Spec3 chatbot
 =======
 # Getting Started with Create React App
+=======
+# Spec3 Chatbot Frontend
+>>>>>>> 54fea21 (Initial Spec3 Chatbot release)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React TypeScript frontend for the Spec3 Chatbot powered by AWS Bedrock.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 Modern, clean UI with Tailwind CSS
+- 💬 Real-time chat interface
+- 📱 Responsive design for all devices
+- ⚡ TypeScript for better development experience
+- 🔄 Auto-scrolling messages
+- ⌨️ Keyboard shortcuts (Enter to send, Shift+Enter for new line)
+- 🗑️ Clear conversation functionality
+- 📊 Character count for messages
+- 🎯 Session management
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+- **Headless UI** - Accessible components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 16+ 
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd spec3-chatbot-frontend
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Set up environment variables:
+Create a `.env` file in the root directory:
+```env
+REACT_APP_API_URL=http://localhost:3001
+```
 
-### `npm run eject`
+4. Start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The app will open at [http://localhost:3000](http://localhost:3000).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Building for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Configuration
 
-## Learn More
+### Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `REACT_APP_API_URL` - The URL of your chatbot API endpoint (default: http://localhost:3001)
 
+<<<<<<< HEAD
 To learn React, check out the [React documentation](https://reactjs.org/).
 >>>>>>> 113b631 (Initialize project using Create React App)
+=======
+### API Integration
+
+The frontend expects the backend API to have the following endpoint:
+
+**POST** `/chat`
+
+Request body:
+```json
+{
+  "message": "User message",
+  "session_id": "session_identifier"
+}
+```
+
+Response:
+```json
+{
+  "response": "Bot response",
+  "session_id": "session_identifier"
+}
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Chat.tsx        # Main chat interface
+│   ├── Message.tsx     # Individual message component
+│   ├── MessageInput.tsx # Message input component
+│   └── TypingIndicator.tsx # Loading indicator
+├── hooks/              # Custom React hooks
+│   └── useChat.ts      # Chat state management
+├── types/              # TypeScript type definitions
+│   └── chat.ts         # Chat-related types
+├── App.tsx             # Main app component
+├── App.css             # App-specific styles
+└── index.css           # Global styles with Tailwind
+```
+
+## Development
+
+### Available Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App
+
+### Code Style
+
+This project uses:
+- TypeScript for type safety
+- ESLint for code linting
+- Prettier for code formatting (recommended)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+>>>>>>> 54fea21 (Initial Spec3 Chatbot release)
